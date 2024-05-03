@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+    <script src="js/script.js" type="module" defer></script>
+    <script src="js/getTodos.js" type="module" efer></script>
+    <script src="js/show.js" type="module" defer></script>
+    <script src="js/editTodo.js" type="module" defer></script>
+    <script src="js/deleteTodo.js" type="module" defer></script>
+    <script src="js/checkTodo.js" type="module" defer></script>
+    <title>Todos</title>
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="title"><a href="/">Tasks Tracker</a></h2>
+      <div class="header__container">
+        <div class="box">
+          DF
+          <div class="dropdown hide">
+            <p class="highlight"></p>
+            <p class="greeting">Hi, Dushimimana Fabrice</p>
+            <a href="/settings" class="settings-link">Manage your Account</a>
+            <!-- <a href="/users/delete">Delete Account</a> -->
+          </div>
+        </div>
+        <ul class="nav__links">
+          <li><a href="/login.html" class="btn btn--login">Login</a></li>
+          <li><a href="/signup.html" class="btn btn--signup">Signup</a></li>
+          <li><a href="logout.html" class="btn btn--logout">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <h1 class="heading__primary">TODO TASKS</h1>
+      <div class="todo__header">
+        <p class="todos__title">Tasks</p>
+        <p class="todos__title">Actions</p>
+      </div>
+      <ul class="todos">
+        <!-- <li class="todos__todo">
+          <div class="todo__left">
+            <input type="checkbox" id="12345" class="checkbox" checked />
+            <p class="todos__text">
+              <span class="completed">Creating a todo application</span>
+              <a href="/todos/12345" class="view">View &rarr;</a>
+            </p>
+          </div>
+          <div class="todo__right">
+            <a href="/todos/12345/edit">
+              <ion-icon name="create" class="todo__edit"></ion-icon>
+            </a>
+            <form action="/todos/12345?_method=DELETE" method="POST">
+              <button class="delete">
+                <ion-icon name="trash" class="todo__delete"></ion-icon>
+              </button>
+            </form>
+          </div>
+        </li> -->
+        <!--<li class="todos__todo">
+          <div class="todo__left">
+            <form class="check-form">
+              <input type="checkbox" />
+            </form>
+            <p class="todos__text">Signin Page | Create signin page</p>
+          </div>
+          <div class="todo__right">
+            <ion-icon name="create" class="todo__edit"></ion-icon>
+            <ion-icon name="trash" class="todo__delete"></ion-icon>
+          </div>
+        </li>
+        <li class="todos__todo">
+          <div class="todo__left">
+            <form class="check-form">
+              <input type="checkbox" />
+            </form>
+            <p class="todos__text">Homepage | Create Homepage</p>
+          </div>
+          <div class="todo__right">
+            <ion-icon name="create" class="todo__edit"></ion-icon>
+            <ion-icon name="trash" class="todo__delete"></ion-icon>
+          </div>
+        </li>
+        <li class="todos__todo">
+          <div class="todo__left">
+            <form class="check-form">
+              <input type="checkbox" />
+            </form>
+            <p class="todos__text">About page | Create About page</p>
+          </div>
+          <div class="todo__right">
+            <ion-icon name="create" class="todo__edit"></ion-icon>
+            <ion-icon name="trash" class="todo__delete"></ion-icon>
+          </div>
+        </li>
+        <li class="todos__todo">
+          <div class="todo__left">
+            <form class="check-form">
+              <input type="checkbox" />
+            </form>
+            <p class="todos__text">Careers page | Create Career page</p>
+          </div>
+          <div class="todo__right">
+            <ion-icon name="create" class="todo__edit"></ion-icon>
+            <ion-icon name="trash" class="todo__delete"></ion-icon>
+          </div>
+        </li> -->
+      </ul>
+      <div class="add__container">
+        <a href="new.html" class="add__link">
+          <ion-icon name="add-circle" class="add"></ion-icon>
+          <span>Add Task</span>
+        </a>
+        <a href="#" class="back-btn">&larr; Go back</a>
+        <button class="btn btn--delete btn--deleteAll hidden">
+          Remove All
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay overlay-edit hidden"></div>
+    <div class="modal modal-edit hidden">
+      <form method="POST" class="form edit--form" data-id="12345">
+        <div class="form__group">
+          <label for="text" class="form__label">Todo Text</label>
+          <input
+            type="text"
+            name="text"
+            id="text"
+            value="Hello there"
+            class="form__input"
+            placeholder="Enter todo text"
+            required
+          />
+        </div>
+        <button class="btn btn--big">Edit task</button>
+      </form>
+    </div>
+    <div class="overlay overlay-delete hidden"></div>
+    <div class="modal modal-delete hidden">
+      <div class="delete-container">
+        <p>Are you sure you want to delete ?</p>
+        <button class="btn delete-yes">Yes</button>
+        <button class="btn delete-cancel">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
